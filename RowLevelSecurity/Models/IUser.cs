@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace RowLevelSecurity.Models
 {
-    public class Customer
+    public interface IUser
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-
+        int UserId { get; set; }
+        User User { get; set; }
     }
 }
