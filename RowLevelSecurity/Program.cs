@@ -9,7 +9,7 @@ namespace RowLevelSecurity
 {
     class Program
     {
-        public static int UserId = 1; //fake userId
+        public static int UserId = 2; //fake userId
         static void Main(string[] args)
         {
 
