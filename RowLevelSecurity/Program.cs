@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RowLevelSecurity.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,19 @@ namespace RowLevelSecurity
 {
     class Program
     {
+        public static int UserId = 1; //fake userId
         static void Main(string[] args)
         {
 
-            var t = new List<string>();
+            GenericRepository<Post, Context> repo = new GenericRepository<Post, Context>();
 
+            List<Post> posts = repo.GetAll().ToList();
+
+            foreach (Post item in posts)
+                Console.WriteLine(item.Context);
+
+            Console.ReadKey();
         }
     }
-}
+} 
+
